@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<script>
+
+// objeto: {key(propiedad):valor}
+
+var diego = {
+	nombre:"diego", 
+	edad:28
+};
+
+var juan = {
+	nombre:"juan", 
+	edad:27,
+	saludo : function(otro_obj) {
+		console.log(this.nombre + " saluda a " + otro_obj.nombre);
+	},
+
+	compara : function(otro_obj) {
+
+		if ('edad' in otro_obj || 'nombre' in otro_obj) {
+		if (otro_obj.edad > this.edad) {console.log(otro_obj.nombre + " es el viejo")}
+			else {console.log(this.nombre + " es el viejo	")} 
+		}
+	else console.log("No existe edad o nombre en el objeto")
+	}
+
+	};
+
+</script>
+
+</head>
+<body>
+	
+</body>
+</html>
