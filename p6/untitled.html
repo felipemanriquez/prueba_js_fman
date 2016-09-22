@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<style type="text/css">
+
+	#wrapper {
+	margin-top: 100px;
+    margin-bottom: 100px;
+	}
+
+</style>
+
+
+
+<div id="wrapper">
+	
+<ol class="ignorame">
+  <li>Elemento 1</li>
+  <li>Elemento 2</li>
+  <li>Elemento 3</li>
+</ol>
+
+</div>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>	
+
+<script>
+
+var counter = 4;
+
+$('#wrapper').on('click', function(e){
+
+// e.stopPropagation()
+
+$('ol').append("<li>Elemento " + counter);
+counter = counter+1;
+
+});
+
+// var maindiv = $('#wrapper');
+
+// maindiv.click(function(event){
+//     if(event.target === this){
+// 		$('ol').append("<li>Elemento " + counter);
+// 		counter = counter+1;   } 
+
+//     else 
+//         console.log("se ignora");
+    
+// });​
+
+
+</script>
+</body>
+</html>
